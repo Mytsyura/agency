@@ -77,15 +77,6 @@ const mapDispatchToProps = dispatch => {
           selectedProductSize
         )
       );
-<<<<<<< HEAD
-=======
-    },
-    addToWishlist: (item, addToast) => {
-      dispatch(addToWishlist(item, addToast));
-    },
-    addToCompare: (item, addToast) => {
-      dispatch(addToCompare(item, addToast));
->>>>>>> 39830ce623f8d66ab8b443889efaab221a961f75
     }
   };
 };

@@ -93,108 +93,13 @@ const ProductGridListSingle = ({
                   </Link>
                 </h3>
                 <div className="product-list-price">
-<<<<<<< HEAD
                   {<span>{'₴' + product.price} </span>}
-=======
-                  {discountedPrice !== null ? (
-                    <Fragment>
-                      <span>
-                        {currency.currencySymbol + finalDiscountedPrice}
-                      </span>{" "}
-                      <span className="old">
-                        {currency.currencySymbol + finalProductPrice}
-                      </span>
-                    </Fragment>
-                  ) : (
-                      <span>{currency.currencySymbol + finalProductPrice} </span>
-                    )}
->>>>>>> 39830ce623f8d66ab8b443889efaab221a961f75
                 </div>
                 {product.shortDescription ? (
                   <p>{product.shortDescription}</p>
                 ) : (
                     ""
                   )}
-<<<<<<< HEAD
-=======
-
-                <div className="shop-list-actions d-flex align-items-center">
-                  <div className="shop-list-btn btn-hover">
-                    {product.affiliateLink ? (
-                      <a
-                        href={product.affiliateLink}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        {" "}
-                        Buy now{" "}
-                      </a>
-                    ) : product.variation && product.variation.length >= 1 ? (
-                      <Link
-                        to={`${process.env.PUBLIC_URL}/product/${product.id}`}
-                      >
-                        Select Option
-                      </Link>
-                    ) : product.stock && product.stock > 0 ? (
-                      <button
-                        onClick={() => addToCart(product, addToast)}
-                        className={
-                          cartItem !== undefined && cartItem.quantity > 0
-                            ? "active"
-                            : ""
-                        }
-                        disabled={
-                          cartItem !== undefined && cartItem.quantity > 0
-                        }
-                        title={
-                          cartItem !== undefined
-                            ? "Added to cart"
-                            : "Add to cart"
-                        }
-                      >
-                        {" "}
-                        <i className="pe-7s-cart"></i>{" "}
-                        {cartItem !== undefined && cartItem.quantity > 0
-                          ? "Added"
-                          : "Add to cart"}
-                      </button>
-                    ) : (
-                            <button disabled className="active">
-                              Out of Stock
-                            </button>
-                          )}
-                  </div>
-
-                  <div className="shop-list-wishlist ml-10">
-                    <button
-                      className={wishlistItem !== undefined ? "active" : ""}
-                      disabled={wishlistItem !== undefined}
-                      title={
-                        wishlistItem !== undefined
-                          ? "Added to wishlist"
-                          : "Add to wishlist"
-                      }
-                      onClick={() => addToWishlist(product, addToast)}
-                    >
-                      <i className="pe-7s-like" />
-                    </button>
-                  </div>
-                  <div className="shop-list-compare ml-10">
-                    <button
-                      className={compareItem !== undefined ? "active" : ""}
-                      disabled={compareItem !== undefined}
-                      title={
-                        compareItem !== undefined
-                          ? "Added to compare"
-                          : "Add to compare"
-                      }
-                      onClick={() => addToCompare(product, addToast)}
-                    >
-                      <i className="pe-7s-shuffle" />
-                    </button>
-                  </div>
-                </div>
->>>>>>> 39830ce623f8d66ab8b443889efaab221a961f75
               </div>
             </div>
           </div>
@@ -206,12 +111,6 @@ const ProductGridListSingle = ({
         onHide={() => setModalShow(false)}
         product={product}
         currency={currency}
-<<<<<<< HEAD
-=======
-        discountedprice={discountedPrice}
-        finalproductprice={finalProductPrice}
-        finaldiscountedprice={finalDiscountedPrice}
->>>>>>> 39830ce623f8d66ab8b443889efaab221a961f75
         cartitem={cartItem}
         wishlistitem={wishlistItem}
         compareitem={compareItem}
