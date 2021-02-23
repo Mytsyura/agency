@@ -6,7 +6,6 @@ import { ToastProvider } from "react-toast-notifications";
 import { multilanguage, loadLanguages } from "redux-multilanguage";
 import { connect } from "react-redux";
 import { BreadcrumbsProvider } from "react-breadcrumbs-dynamic";
-import Tabletop from 'tabletop';
 
 const HomeCosmetics = lazy(() => import("./pages/home/HomeCosmetics"));
 
@@ -25,18 +24,6 @@ const About = lazy(() => import("./pages/other/About"));
 const Contact = lazy(() => import("./pages/other/Contact"));
 
 const App = (props) => {
-  useEffect(() => {
-    Tabletop.init({
-      key: '11RggMvWmXKxLNpBASRohUgQJqlvSSvLiXp16RJAQl_o',
-      callback: (googleData) => {
-        console.log(googleData);
-        localStorage.setItem('data', googleData)
-      },
-      wanted: ['Лист1'],
-      sheetPrivacy: 'public',
-      simpleSheet: false,
-    });
-  }, []);
   useEffect(() => {
     props.dispatch(
       loadLanguages({

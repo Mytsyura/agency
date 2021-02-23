@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import Logo from "../../components/header/Logo";
 import NavMenu from "../../components/header/NavMenu";
-import MobileMenu from "../../components/header/MobileMenu";
 import HeaderTop from "../../components/header/HeaderTop";
 
 const HeaderOne = ({
@@ -65,13 +64,8 @@ const HeaderOne = ({
               {/* Nav menu */}
               <NavMenu />
             </div>
-            <div className="col-xl-2 col-lg-2 col-md-6 col-8">
-
-            </div>
           </div>
         </div>
-        {/* mobile menu */}
-        <MobileMenu />
       </div>
     </header>
   );

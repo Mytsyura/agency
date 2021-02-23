@@ -17,7 +17,7 @@ const TabProduct = ({
         } ${bgColorClass ? bgColorClass : ""}`}
     >
       <div className="container">
-        <SectionTitle titleText="DAILY DEALS!" positionClass="text-center" />
+        <SectionTitle titleText="НАЙБЛИЖЧІ ПОДІЇ" positionClass="text-center" />
         <Tab.Container defaultActiveKey="newArrival">
           <Tab.Content>
             <Tab.Pane eventKey="newArrival">
