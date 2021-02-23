@@ -18,7 +18,6 @@ const ShopGridFilter = lazy(() => import("./pages/shop/ShopGridFilter"));
 const Product = lazy(() => import("./pages/shop-product/Product"));
 
 // blog pages
-
 const BlogNoSidebar = lazy(() => import("./pages/blog/BlogNoSidebar"));
 
 // other pages
