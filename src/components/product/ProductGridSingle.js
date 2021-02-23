@@ -8,6 +8,7 @@ import {
   AiOutlineEnvironment,
   AiTwotoneBank,
 } from 'react-icons/ai';
+import Button from 'react-bootstrap/Button';
 
 const ProductGridSingle = ({ product, sliderClassName, spaceBottomClass }) => (
   <>
@@ -63,6 +64,11 @@ const ProductGridSingle = ({ product, sliderClassName, spaceBottomClass }) => (
               <BsCreditCard size="2rem" color="#555252" />
             </div>
             <span className="price-element">{product.Price + ' ₴'}</span>
+          </div>
+          <div>
+            <a href={product.Link}>
+              <Button variant="outline-secondary" >Купити квиток</Button>
+            </a>
           </div>
         </div>
       </div>
