@@ -29,11 +29,11 @@ const RelatedProductSlider = ({ spaceBottomClass, category }) => {
     <div
       className={`related-product-area ${
         spaceBottomClass ? spaceBottomClass : ""
-      }`}
+        }`}
     >
       <div className="container">
         <SectionTitle
-          titleText="Related Products"
+          titleText="Схожі події"
           positionClass="text-center"
           spaceClass="mb-50"
         />

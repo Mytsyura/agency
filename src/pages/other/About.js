@@ -5,13 +5,10 @@ import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
 import SectionTitleWithText from "../../components/section-title/SectionTitleWithText";
-import BannerOne from "../../wrappers/banner/BannerOne";
 import TextGridOne from "../../wrappers/text-grid/TextGridOne";
 import FunFactOne from "../../wrappers/fun-fact/FunFactOne";
-import BrandLogoSliderOne from "../../wrappers/brand-logo/BrandLogoSliderOne";
 
-const About = ({ location }) => {
-  const { pathname } = location;
+const About = () => {
 
   return (
     <Fragment>
@@ -22,22 +19,13 @@ const About = ({ location }) => {
           content="About page of flone react minimalist eCommerce template."
         />
       </MetaTags>
-      <BreadcrumbsItem to={process.env.PUBLIC_URL + "/"}>Home</BreadcrumbsItem>
-      <BreadcrumbsItem to={process.env.PUBLIC_URL + pathname}>
-        About us
-      </BreadcrumbsItem>
+      <BreadcrumbsItem to={process.env.PUBLIC_URL + "/"}>About us</BreadcrumbsItem>
       <LayoutOne>
         {/* breadcrumb */}
         <Breadcrumb />
 
         {/* section title with text */}
         <SectionTitleWithText spaceTopClass="pt-100" spaceBottomClass="pb-95" />
-
-        {/* banner */}
-        <BannerOne spaceBottomClass="pb-70" />
-
-        {/* text grid */}
-        <TextGridOne spaceBottomClass="pb-70" />
 
         {/* fun fact */}
         <FunFactOne
@@ -46,8 +34,9 @@ const About = ({ location }) => {
           bgClass="bg-gray-3"
         />
 
-        {/* brand logo slider */}
-        <BrandLogoSliderOne spaceBottomClass="pb-70" />
+        {/* text grid */}
+        <TextGridOne spaceBottomClass="pb-70" />
+
       </LayoutOne>
     </Fragment>
   );

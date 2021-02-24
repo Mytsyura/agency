@@ -4,11 +4,9 @@ import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
-import BlogPagination from "../../wrappers/blog/BlogPagination";
-import BlogPostsNoSidebar from "../../wrappers/blog/BlogPostsNoSidebar";
+import TextGridOne from "../../wrappers/text-grid/TextGridOne";
 
-const BlogNoSidebar = ({ location }) => {
-  const { pathname } = location;
+const BlogNoSidebar = () => {
 
   return (
     <Fragment>
@@ -19,30 +17,17 @@ const BlogNoSidebar = ({ location }) => {
           content="Blog of flone react minimalist eCommerce template."
         />
       </MetaTags>
-      <BreadcrumbsItem to={process.env.PUBLIC_URL + "/"}>Home</BreadcrumbsItem>
-      <BreadcrumbsItem to={process.env.PUBLIC_URL + pathname}>
-        Blog
-      </BreadcrumbsItem>
+      <BreadcrumbsItem to={process.env.PUBLIC_URL + "/"}>Наші Послуги</BreadcrumbsItem>
+
       <LayoutOne >
         {/* breadcrumb */}
         <Breadcrumb />
-        <div className="blog-area pt-100 pb-100 blog-no-sidebar">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="mr-20">
-                  <div className="row">
-                    {/* blog posts */}
-                    <BlogPostsNoSidebar />
-                  </div>
 
-                  {/* blog pagination */}
-                  <BlogPagination />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* text grid */}
+        <TextGridOne spaceBottomClass="pb-70" />
+
+        {/* text grid */}
+        <TextGridOne spaceBottomClass="pb-70" />
       </LayoutOne>
     </Fragment>
   );
