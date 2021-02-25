@@ -25,9 +25,6 @@ const BlogNoSidebar = () => {
 
         {/* text grid */}
         <TextGridOne spaceBottomClass="pb-70" />
-
-        {/* text grid */}
-        <TextGridOne spaceBottomClass="pb-70" />
       </LayoutOne>
     </Fragment>
   );

@@ -349,7 +349,7 @@
     span {
       font-size: 24px;
 
-      color: #fe5252;
+      color: #290303;
       &.old {
         font-size: 18px;
 
@@ -1157,5 +1157,10 @@
 
   .price-element {
     font-size: 22px !important;
+  }
+
+  .buy-btn {
+    width: 100%;
+    margin-top: 15px;
   }
 }

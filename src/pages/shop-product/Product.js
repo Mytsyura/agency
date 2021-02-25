@@ -1,17 +1,49 @@
-import PropTypes from "prop-types";
-import React, { Fragment } from "react";
-import MetaTags from "react-meta-tags";
-import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
-import { connect } from "react-redux";
-import LayoutOne from "../../layouts/LayoutOne";
-import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
-import RelatedProductSlider from "../../wrappers/product/RelatedProductSlider";
-import ProductImageDescription from "../../wrappers/product/ProductImageDescription";
+import PropTypes from 'prop-types';
+import React, {useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
+import MetaTags from 'react-meta-tags';
+import {BreadcrumbsItem} from 'react-breadcrumbs-dynamic';
+import {useToasts} from 'react-toast-notifications';
+import Tabletop from 'tabletop';
+import LayoutOne from '../../layouts/LayoutOne';
+import Breadcrumb from '../../wrappers/breadcrumb/Breadcrumb';
+import RelatedProductSlider from '../../wrappers/product/RelatedProductSlider';
+import ProductImageDescription from '../../wrappers/product/ProductImageDescription';
 
-const Product = ({ product }) => {
+const Product = () => {
+  const params = useParams();
+  const {addToast} = useToasts();
+  const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    Tabletop.init({
+      key: '11RggMvWmXKxLNpBASRohUgQJqlvSSvLiXp16RJAQl_o',
+      callback: (googleData) => {
+        setProduct(googleData.Лист1.elements.find((e) => e.ID === params.id));
+        setLoading(false);
+      },
+      error: (e) => {
+        addToast('Error', {appearance: 'error'});
+        setLoading(false);
+      },
+      wanted: ['Лист1'],
+      sheetPrivacy: 'public',
+      simpleSheet: false,
+    });
+  }, []);
 
   return (
-    <Fragment>
+    <>
+      {loading && (
+        <div className="flone-preloader-wrapper">
+          <div className="flone-preloader">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      )}
       <MetaTags>
         <title>Flone | Product Page</title>
         <meta
@@ -20,9 +52,11 @@ const Product = ({ product }) => {
         />
       </MetaTags>
 
-      <BreadcrumbsItem to={process.env.PUBLIC_URL + "/"}>Про Подію</BreadcrumbsItem>
+      <BreadcrumbsItem to={process.env.PUBLIC_URL + '/'}>
+        Про Подію
+      </BreadcrumbsItem>
 
-      <LayoutOne >
+      <LayoutOne>
         {/* breadcrumb */}
         <Breadcrumb />
 
@@ -34,27 +68,14 @@ const Product = ({ product }) => {
         />
 
         {/* related product slider */}
-        <RelatedProductSlider
-          spaceBottomClass="pb-95"
-          category={product.category[0]}
-        />
+        <RelatedProductSlider spaceBottomClass="pb-95" />
       </LayoutOne>
-    </Fragment>
+    </>
   );
 };
 
 Product.propTypes = {
   location: PropTypes.object,
-  product: PropTypes.object
 };
 
-const mapStateToProps = (state, ownProps) => {
-  const itemId = ownProps.match.params.id;
-  return {
-    product: state.productData.products.filter(
-      single => single.id === itemId
-    )[0]
-  };
-};
-
-export default connect(mapStateToProps)(Product);
+export default Product;

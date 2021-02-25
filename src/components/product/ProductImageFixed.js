@@ -6,9 +6,9 @@ const ProductImageFixed = ({ product }) => {
     <div className="product-large-image-wrapper">
 
       <div className="product-fixed-image">
-        {product.image ? (
+        {product.Banner ? (
           <img
-            src={process.env.PUBLIC_URL + product.image[0]}
+            src={product.Banner}
             alt=""
             className="img-fluid"
           />

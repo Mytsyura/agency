@@ -67,7 +67,7 @@ const ProductGridSingle = ({ product, sliderClassName, spaceBottomClass }) => (
           </div>
           <div>
             <a href={product.Link}>
-              <Button variant="outline-secondary">Купити квиток</Button>
+              <Button variant="outline-secondary" className="buy-btn">Купити квиток</Button>
             </a>
           </div>
         </div>

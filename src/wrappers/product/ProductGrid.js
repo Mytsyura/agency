@@ -1,21 +1,25 @@
-import PropTypes from "prop-types";
-import React, { Fragment, useEffect, useState } from "react";
+import PropTypes from 'prop-types';
+import React, { Fragment, useEffect, useState } from 'react';
+import { useToasts } from 'react-toast-notifications';
 import Tabletop from 'tabletop';
-import ProductGridSingle from "../../components/product/ProductGridSingle";
+import ProductGridSingle from '../../components/product/ProductGridSingle';
 
-const ProductGrid = ({
-  sliderClassName,
-  spaceBottomClass
-}) => {
+const ProductGrid = ({ sliderClassName, spaceBottomClass }) => {
+  const { addToast } = useToasts();
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     Tabletop.init({
       key: '11RggMvWmXKxLNpBASRohUgQJqlvSSvLiXp16RJAQl_o',
       callback: (googleData) => {
-        console.log(googleData.Лист1.elements);
         setProducts(googleData.Лист1.elements);
-        localStorage.setItem('data', googleData)
+        setLoading(false);
+      },
+      error: (e) => {
+        addToast('Error', { appearance: 'error' });
+        setLoading(false);
       },
       wanted: ['Лист1'],
       sheetPrivacy: 'public',
@@ -25,7 +29,15 @@ const ProductGrid = ({
 
   return (
     <Fragment>
-      {products.map(product => {
+      {loading && (
+        <div className="flone-preloader-wrapper">
+          <div className="flone-preloader">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      )}
+      {products.map((product) => {
         return (
           <ProductGridSingle
             sliderClassName={sliderClassName}
@@ -41,7 +53,7 @@ const ProductGrid = ({
 
 ProductGrid.propTypes = {
   sliderClassName: PropTypes.string,
-  spaceBottomClass: PropTypes.string
+  spaceBottomClass: PropTypes.string,
 };
 
 export default ProductGrid;
