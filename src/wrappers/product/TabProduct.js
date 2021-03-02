@@ -1,27 +1,27 @@
-import PropTypes from "prop-types";
-import React from "react";
-import Tab from "react-bootstrap/Tab";
-import SectionTitle from "../../components/section-title/SectionTitle";
-import ProductGrid from "./ProductGrid";
+import PropTypes from 'prop-types';
+import React from 'react';
+import Tab from 'react-bootstrap/Tab';
+import SectionTitle from '../../components/section-title/SectionTitle';
+import ProductGrid from './ProductGrid';
 
 const TabProduct = ({
   spaceTopClass,
   spaceBottomClass,
   bgColorClass,
-  category
+  category,
 }) => {
   return (
     <div
-      className={`product-area ${spaceTopClass ? spaceTopClass : ""} ${
-        spaceBottomClass ? spaceBottomClass : ""
-        } ${bgColorClass ? bgColorClass : ""}`}
+      className={`product-area ${spaceTopClass ? spaceTopClass : ''} ${
+        spaceBottomClass ? spaceBottomClass : ''
+      } ${bgColorClass ? bgColorClass : ''}`}
     >
       <div className="container">
         <SectionTitle titleText="НАЙБЛИЖЧІ ПОДІЇ" positionClass="text-center" />
         <Tab.Container defaultActiveKey="newArrival">
           <Tab.Content>
             <Tab.Pane eventKey="newArrival">
-              <div className="row">
+              <div className="row" style={{position: 'relative', marginTop: '60px'}}>
                 <ProductGrid
                   category={category}
                   type="new"
@@ -41,7 +41,7 @@ TabProduct.propTypes = {
   bgColorClass: PropTypes.string,
   category: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default TabProduct;

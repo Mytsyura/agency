@@ -1164,3 +1164,13 @@
     margin-top: 15px;
   }
 }
+
+.without-border {
+  box-shadow: none;
+  border: 0;
+}
+
+.title-of-t {
+  display: flex;
+  justify-content: space-between;
+}

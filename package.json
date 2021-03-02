@@ -4,10 +4,11 @@
   "private": true,
   "dependencies": {
     "animate.css": "^3.7.2",
-    "antd": "^4.12.3",
+    "antd": "^4.13.0",
     "axios": "^0.19.0",
     "bootstrap": "4.5.0",
     "google-maps-react": "^2.0.2",
+    "moment": "^2.29.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-app-polyfill": "^1.0.4",
