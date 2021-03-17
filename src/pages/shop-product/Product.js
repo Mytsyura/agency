@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import React, {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import MetaTags from 'react-meta-tags';
-import {BreadcrumbsItem} from 'react-breadcrumbs-dynamic';
-import {useToasts} from 'react-toast-notifications';
+import { BreadcrumbsItem } from 'react-breadcrumbs-dynamic';
+import { useToasts } from 'react-toast-notifications';
 import Tabletop from 'tabletop';
 import LayoutOne from '../../layouts/LayoutOne';
 import Breadcrumb from '../../wrappers/breadcrumb/Breadcrumb';
@@ -12,7 +12,7 @@ import ProductImageDescription from '../../wrappers/product/ProductImageDescript
 
 const Product = () => {
   const params = useParams();
-  const {addToast} = useToasts();
+  const { addToast } = useToasts();
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(false);
 
@@ -25,7 +25,7 @@ const Product = () => {
         setLoading(false);
       },
       error: (e) => {
-        addToast('Error', {appearance: 'error'});
+        addToast('Error', { appearance: 'error' });
         setLoading(false);
       },
       wanted: ['Лист1'],
@@ -45,11 +45,7 @@ const Product = () => {
         </div>
       )}
       <MetaTags>
-        <title>Flone | Product Page</title>
-        <meta
-          name="description"
-          content="Product page of flone react minimalist eCommerce template."
-        />
+        <title>RIO | Concert & Agency</title>
       </MetaTags>
 
       <BreadcrumbsItem to={process.env.PUBLIC_URL + '/'}>

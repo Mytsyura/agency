@@ -13,8 +13,7 @@ import Button from 'react-bootstrap/Button';
 const ProductGridSingle = ({ product, sliderClassName, spaceBottomClass }) => (
   <>
     <div
-      className={`col-xl-3 col-md-6 col-lg-4 col-sm-6 ${
-        sliderClassName ? sliderClassName : ''
+      className={`col-xl-3 col-md-6 col-lg-4 col-sm-6 ${sliderClassName ? sliderClassName : ''
         }`}
     >
       <div

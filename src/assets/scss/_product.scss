@@ -1,6 +1,15 @@
 /*------- 6. Product style  --------*/
 .product-area {
   position: relative;
+
+  .img-logo {
+    display: flex;
+    justify-content: center;
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+
   .row {
     &.three-column {
       .col-xl-3 {
@@ -137,7 +146,7 @@
         color: #fff;
         border-radius: 3px;
         &.pink {
-          background-color: #fa6bff;
+          background-color: #5dacf7;
         }
         &.purple {
           background-color: $theme-color;
@@ -314,17 +323,17 @@
 .product-details-content {
   @media #{$lg-layout} {
     &.ml-70 {
-      margin-left: 0;
+      margin-left: 20%;
     }
   }
   @media #{$md-layout} {
     &.ml-70 {
-      margin-left: 0;
+      margin-left: 20%;
     }
   }
   @media #{$xs-layout} {
     &.ml-70 {
-      margin-top: 30px;
+      margin-top: 10px;
       margin-left: 0;
     }
   }
@@ -1162,6 +1171,18 @@
   .buy-btn {
     width: 100%;
     margin-top: 15px;
+    background: rgb(39 141 222);
+    color: white;
+    border-color: rgb(39 141 222);
+  }
+
+  .buy-btn-2 {
+    margin-right: 70%;
+    width: 50%;
+    margin-top: 15px;
+    background: rgb(39 141 222);
+    color: white;
+    border-color: rgb(39 141 222);
   }
 }
 
@@ -1173,4 +1194,14 @@
 .title-of-t {
   display: flex;
   justify-content: space-between;
+}
+
+.ant-select-clear {
+  top: 43%;
+}
+
+.ant-select-selector {
+  min-height: 35px;
+  border-radius: 7px !important;
+  min-width: 300px;
 }

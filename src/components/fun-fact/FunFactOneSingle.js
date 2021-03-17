@@ -14,13 +14,13 @@ const FunFactOneSingle = ({ data, spaceBottomClass, textAlignClass }) => {
   return (
     <div className="col-lg-3 col-md-6 col-sm-6">
       <div
-        className={`single-count ${textAlignClass ? textAlignClass : ""} ${
-          spaceBottomClass ? spaceBottomClass : ""
-        }`}
+        className={`single-count ${textAlignClass ? textAlignClass : ""} ${spaceBottomClass ? spaceBottomClass : ""
+          }`}
       >
         <div className="count-icon">
           <i className={data.iconClass} />
         </div>
+        <span>Понад</span>
         <h2 className="count">
           <VisibilitySensor
             onChange={onVisibilityChange}

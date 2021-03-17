@@ -6,16 +6,12 @@ import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
 import TextGridOne from "../../wrappers/text-grid/TextGridOne";
 
-const BlogNoSidebar = () => {
+const Services = () => {
 
   return (
     <Fragment>
       <MetaTags>
-        <title>Flone | Blog</title>
-        <meta
-          name="description"
-          content="Blog of flone react minimalist eCommerce template."
-        />
+        <title>RIO | Concert & Agency</title>
       </MetaTags>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + "/"}>Наші Послуги</BreadcrumbsItem>
 
@@ -30,8 +26,8 @@ const BlogNoSidebar = () => {
   );
 };
 
-BlogNoSidebar.propTypes = {
+Services.propTypes = {
   location: PropTypes.object
 };
 
-export default BlogNoSidebar;
+export default Services;

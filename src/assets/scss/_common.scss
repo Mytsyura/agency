@@ -1459,79 +1459,6 @@ textarea:focus {
     margin-left: -15px;
   }
 }
-.custom-row-3 {
-  display: flex;
-  flex-wrap: wrap;
-
-  margin-right: -13.6px;
-  margin-left: -13.6px;
-  & div[class^="col-"] {
-    padding-right: 13.6px;
-    padding-left: 13.6px;
-    @media #{$xs-layout} {
-      padding-right: 15px;
-      padding-left: 15px;
-    }
-  }
-  @media #{$xl-layout} {
-    margin-right: -13.6px;
-    margin-left: -13.6px;
-  }
-  @media #{$lg-layout} {
-    margin-right: -13.6px;
-    margin-left: -13.6px;
-  }
-  @media #{$md-layout} {
-    margin-right: -13.6px;
-    margin-left: -13.6px;
-  }
-  @media #{$xs-layout} {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-}
-
-.custom-col-5 {
-  position: relative;
-
-  flex: 0 0 20%;
-
-  width: 100%;
-  max-width: 20%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  @media #{$xl-layout} {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  @media #{$lg-layout} {
-    flex: 0 0 33.333%;
-
-    max-width: 33.333%;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  @media #{$md-layout} {
-    flex: 0 0 50%;
-
-    max-width: 50%;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  @media #{$xs-layout} {
-    flex: 0 0 100%;
-
-    max-width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  @media #{$sm-layout} {
-    flex: 0 0 50%;
-
-    max-width: 50%;
-  }
-}
 
 .mobile-menu-area {
   display: none;
@@ -1610,8 +1537,8 @@ textarea:focus {
   color: #fff;
   border: none;
   border-radius: 50px;
-  background: none;
-  background-color: $theme-color;
+  background: #278dde;
+  background-color: #278dde;
   &.show {
     visibility: visible;
 
@@ -1867,8 +1794,20 @@ a.default-btn {
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px;
+    // .img-logo {
+    //   display: flex;
+    //   justify-content: center;
+    // }
   }
 }
+
+// @media (min-width: 480px) {
+//   .container {
+//     .img-logo {
+//       display: none;
+//     }
+//   }
+// }
 
 .item-empty-area {
   &__icon {

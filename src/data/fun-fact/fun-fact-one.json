@@ -1,26 +1,26 @@
 [
   {
     "id": "1",
-    "iconClass": "pe-7s-portfolio",
+    "iconClass": "pe-7s-check",
     "countNum": 360,
-    "title": "project done"
+    "title": "Концертів організовано"
   },
   {
     "id": "2",
-    "iconClass": "pe-7s-cup",
-    "countNum": 690,
-    "title": "cups of coffee"
+    "iconClass": "pe-7s-clock",
+    "countNum": 5,
+    "title": "Років на ринку"
   },
   {
     "id": "3",
-    "iconClass": "pe-7s-light",
-    "countNum": 100,
-    "title": "branding"
+    "iconClass": "pe-7s-cash",
+    "countNum": 1150000,
+    "title": "Проданих білетів"
   },
   {
     "id": "4",
     "iconClass": "pe-7s-smile",
-    "countNum": 420,
-    "title": "happy clients"
+    "countNum": 200000,
+    "title": "Щасливих клієнтів"
   }
 ]

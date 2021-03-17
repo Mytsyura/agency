@@ -7,17 +7,17 @@ import { multilanguage, loadLanguages } from "redux-multilanguage";
 import { connect } from "react-redux";
 import { BreadcrumbsProvider } from "react-breadcrumbs-dynamic";
 
-const HomeCosmetics = lazy(() => import("./pages/home/HomeCosmetics"));
+const Home = lazy(() => import("./pages/home/Home"));
 
 
 // shop pages
-const ShopGridFilter = lazy(() => import("./pages/shop/ShopGridFilter"));
+const Concerts = lazy(() => import("./pages/shop/Concerts"));
 
 // product pages
 const Product = lazy(() => import("./pages/shop-product/Product"));
 
 // blog pages
-const BlogNoSidebar = lazy(() => import("./pages/blog/BlogNoSidebar"));
+const Services = lazy(() => import("./pages/blog/Services"));
 
 // other pages
 const About = lazy(() => import("./pages/other/About"));
@@ -43,8 +43,6 @@ const App = (props) => {
               fallback={
                 <div className="flone-preloader-wrapper">
                   <div className="flone-preloader">
-                    <span></span>
-                    <span></span>
                   </div>
                 </div>
               }
@@ -53,17 +51,17 @@ const App = (props) => {
                 <Route
                   exact
                   path={process.env.PUBLIC_URL + "/"}
-                  component={HomeCosmetics}
+                  component={Home}
                 />
                 <Route
-                  path={process.env.PUBLIC_URL + "/home-cosmetics"}
-                  component={HomeCosmetics}
+                  path={process.env.PUBLIC_URL + "/home"}
+                  component={Home}
                 />
 
                 {/* Shop pages */}
                 <Route
-                  path={process.env.PUBLIC_URL + "/shop-grid-filter"}
-                  component={ShopGridFilter}
+                  path={process.env.PUBLIC_URL + "/concerts"}
+                  component={Concerts}
                 />
 
                 {/* Shop product pages */}
@@ -76,8 +74,8 @@ const App = (props) => {
 
                 {/* Blog pages */}
                 <Route
-                  path={process.env.PUBLIC_URL + "/blog-no-sidebar"}
-                  component={BlogNoSidebar}
+                  path={process.env.PUBLIC_URL + "/services"}
+                  component={Services}
                 />
 
                 {/* Other pages */}

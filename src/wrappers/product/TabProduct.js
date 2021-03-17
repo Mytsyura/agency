@@ -12,16 +12,18 @@ const TabProduct = ({
 }) => {
   return (
     <div
-      className={`product-area ${spaceTopClass ? spaceTopClass : ''} ${
-        spaceBottomClass ? spaceBottomClass : ''
-      } ${bgColorClass ? bgColorClass : ''}`}
+      className={`product-area ${spaceTopClass ? spaceTopClass : ''} ${spaceBottomClass ? spaceBottomClass : ''
+        } ${bgColorClass ? bgColorClass : ''}`}
     >
       <div className="container">
         <SectionTitle titleText="НАЙБЛИЖЧІ ПОДІЇ" positionClass="text-center" />
         <Tab.Container defaultActiveKey="newArrival">
           <Tab.Content>
             <Tab.Pane eventKey="newArrival">
-              <div className="row" style={{position: 'relative', marginTop: '60px'}}>
+              <div
+                className="row"
+                style={{ position: 'relative', marginTop: '60px' }}
+              >
                 <ProductGrid
                   category={category}
                   type="new"

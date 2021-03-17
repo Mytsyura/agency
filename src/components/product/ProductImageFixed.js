@@ -13,8 +13,8 @@ const ProductImageFixed = ({ product }) => {
             className="img-fluid"
           />
         ) : (
-            ""
-          )}
+          ""
+        )}
       </div>
     </div>
   );

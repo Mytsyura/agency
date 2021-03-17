@@ -22,8 +22,7 @@ const ProductGridListSingle = ({
   return (
     <Fragment>
       <div
-        className={`col-xl-4 col-sm-6 ${
-          sliderClassName ? sliderClassName : ""
+        className={`col-xl-4 col-sm-6 ${sliderClassName ? sliderClassName : ""
           }`}
       >
         <div
@@ -67,21 +66,21 @@ const ProductGridListSingle = ({
                         alt=""
                       />
                     ) : (
-                        ""
-                      )}
+                      ""
+                    )}
                   </Link>
                   {product.discount || product.new ? (
                     <div className="product-img-badges">
                       {product.discount ? (
                         <span className="pink">-{product.discount}%</span>
                       ) : (
-                          ""
-                        )}
+                        ""
+                      )}
                       {product.new ? <span className="purple">New</span> : ""}
                     </div>
                   ) : (
-                      ""
-                    )}
+                    ""
+                  )}
                 </div>
               </div>
             </div>
@@ -98,8 +97,8 @@ const ProductGridListSingle = ({
                 {product.shortDescription ? (
                   <p>{product.shortDescription}</p>
                 ) : (
-                    ""
-                  )}
+                  ""
+                )}
               </div>
             </div>
           </div>

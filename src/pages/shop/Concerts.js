@@ -7,13 +7,12 @@ import LayoutOne from '../../layouts/LayoutOne';
 import Breadcrumb from '../../wrappers/breadcrumb/Breadcrumb';
 import TabProduct from "../../wrappers/product/TabProduct";
 
-const ShopGridFilter = ({ location }) => {
+const Concerts = ({ location }) => {
     const { pathname } = location;
     return (
         <Fragment>
             <MetaTags>
-                <title>Flone | Shop Page</title>
-                <meta name="description" content="Shop page of flone react minimalist eCommerce template." />
+                <title>RIO | Події</title>
             </MetaTags>
 
             <BreadcrumbsItem to={process.env.PUBLIC_URL + '/'}>RIO</BreadcrumbsItem>
@@ -38,7 +37,7 @@ const ShopGridFilter = ({ location }) => {
     )
 }
 
-ShopGridFilter.propTypes = {
+Concerts.propTypes = {
     location: PropTypes.object,
     products: PropTypes.array
 }
@@ -49,4 +48,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(ShopGridFilter);
+export default connect(mapStateToProps)(Concerts);

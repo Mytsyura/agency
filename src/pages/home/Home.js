@@ -4,7 +4,7 @@ import LayoutOne from "../../layouts/LayoutOne";
 import FeatureIconThree from "../../wrappers/feature-icon/FeatureIconThree";
 import TabProduct from "../../wrappers/product/TabProduct";
 
-const HomeCosmetics = () => {
+const Home = () => {
   return (
     <Fragment>
       <MetaTags>
@@ -31,4 +31,4 @@ const HomeCosmetics = () => {
   );
 };
 
-export default HomeCosmetics;
+export default Home;

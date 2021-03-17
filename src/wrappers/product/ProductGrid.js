@@ -69,7 +69,7 @@ const ProductGrid = ({sliderClassName, spaceBottomClass}) => {
       >
         <AutoComplete
           options={options}
-          style={{width: 200}}
+          style={{width: 300}}
           onSelect={onSelect}
           onSearch={onSearch}
           placeholder="Всі міста"

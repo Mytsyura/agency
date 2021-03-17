@@ -6,37 +6,36 @@ import { multilanguage } from "redux-multilanguage";
 const NavMenu = ({ strings, menuWhiteClass, sidebarMenu }) => {
   return (
     <div
-      className={` ${
-        sidebarMenu
-          ? "sidebar-menu"
-          : `main-menu ${menuWhiteClass ? menuWhiteClass : ""}`
-      } `}
+      className={` ${sidebarMenu
+        ? "sidebar-menu"
+        : `main-menu ${menuWhiteClass ? menuWhiteClass : ""}`
+        } `}
     >
       <nav>
         <ul>
           <li>
-            <Link to={process.env.PUBLIC_URL + "/home-cosmetics"}>
-              {strings["home"]}
+            <Link to={process.env.PUBLIC_URL + "/home"}>
+              Головна
             </Link>
           </li>
           <li>
-            <Link to={process.env.PUBLIC_URL + "/shop-grid-filter"}>
-              {strings["shop"]}
+            <Link to={process.env.PUBLIC_URL + "/concerts"}>
+              Події
             </Link>
           </li>
           <li>
-            <Link to={process.env.PUBLIC_URL + "/blog-no-sidebar"}>
-              {strings["blog"]}
+            <Link to={process.env.PUBLIC_URL + "/services"}>
+              Послуги
             </Link>
           </li>
           <li>
             <Link to={process.env.PUBLIC_URL + "/about"}>
-              {strings["about_us"]}
+              Про нас
             </Link>
           </li>
           <li>
             <Link to={process.env.PUBLIC_URL + "/contact"}>
-              {strings["contact_us"]}
+              Контакти
             </Link>
           </li>
         </ul>

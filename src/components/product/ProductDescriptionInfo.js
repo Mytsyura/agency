@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import React from "react";
+import PropTypes from 'prop-types';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { BsCreditCard } from 'react-icons/bs';
 import {
@@ -9,17 +9,11 @@ import {
   AiTwotoneBank,
 } from 'react-icons/ai';
 
-const ProductDescriptionInfo = ({
-  product,
-}) => {
+const ProductDescriptionInfo = ({ product }) => {
   return (
     <div className="product-details-content ml-70">
       <div className="product-details-price text-center title-of-t">
         {<span>{product.Event} </span>}
-
-        <a href={product.Link}>
-          <Button variant="outline-secondary" className="buy-btn">Купити квиток</Button>
-        </a>
       </div>
       <div className="product-content text-center product_card without-border">
         <div className="product-price price">
@@ -52,11 +46,23 @@ const ProductDescriptionInfo = ({
           </div>
           <span className="price-element">{product.Price + ' ₴'}</span>
         </div>
+        <a href={product.Link}>
+          <Button
+            variant="outline-secondary"
+            style={{
+              background: '#278dde',
+              color: 'white',
+              borderColor: '#278dde',
+            }}
+            className="buy-btn-2"
+          >
+            Купити квиток
+          </Button>
+        </a>
       </div>
       <div className="pro-details-list">
         <p>{product.Description}</p>
       </div>
-
     </div>
   );
 };
@@ -65,4 +71,4 @@ ProductDescriptionInfo.propTypes = {
   product: PropTypes.object,
 };
 
-export default (ProductDescriptionInfo);
+export default ProductDescriptionInfo;
